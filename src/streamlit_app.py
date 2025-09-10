@@ -1,5 +1,6 @@
 import os
 import joblib
+import pandas as pd
 import streamlit as st
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
