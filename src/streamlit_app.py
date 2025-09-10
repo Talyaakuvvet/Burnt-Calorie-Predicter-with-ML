@@ -83,11 +83,11 @@ hr = st.number_input("Heart Rate (bpm)", 40, 220, 120)
 temp = st.number_input("Body Temp (°C)", 34.0, 41.0, 40.0)
 
 # Eğitimde uygulanan FE ile aynı
-gender_num = 0 if gender == "male" else 1
+gender_num = 1 if gender == "female" else 0
 bmi = weight / ((height/100)**2)
 hrx = hr * duration
 wtx = weight * duration
-temp_c = temp - 40.0  # eğitimde ortalamaya yakın sabit
+temp_c = temp - 38.0  # eğitimde ortalamaya yakın sabit
 
 row = pd.DataFrame([{
     "Gender": gender_num, "Age": age, "Height": height, "Weight": weight,
