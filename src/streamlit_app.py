@@ -22,10 +22,6 @@ st.set_page_config(page_title="Calories Burnt Estimator", layout="centered")
 st.title("Calories Burnt Estimator")
 st.caption(f"Streamlit: {st.__version__} | Python: {sys.version.split()[0]} | CWD: {os.getcwd()}")
 
-with st.expander("🔧 Debug"):
-    st.write("Root files:", os.listdir("."))
-    if os.path.exists("src"): st.write("src/:", os.listdir("src"))
-    if os.path.exists("models"): st.write("models/:", os.listdir("models"))
 
 @cache_decorator()
 def get_model():
